@@ -39,45 +39,83 @@
       <div class="row justify-content-center mt-5 mb-5">
         <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-8 col-xxl-8">
           <div class="card " >
-
             <div class="card-body">
               <form class="container-center row g-3">
-                <div class="row m-3">
-                  <div class="col-6  form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                  <label class="form-check-label" for="exampleRadios1">
-                    SING IN
-                  </label>
-                </div>
-                  <div class="col form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                  <label class="form-check-label" for="exampleRadios2">
-                    CREATE ACCOUNT
-                  </label>
-                </div>
-                </div>
-                <div class="">
-                  <label for="staticEmail2" class="visually">Your E-mail Adress</label>
-                  <input type="text"  class="form-control" id="usuario" placeholder="Codigo del estudiante">
-                </div>
-                <div class="">
-                  <label for="inputPassword2" class="visually">Your Password</label>
-                  <input type="password" class="form-control" id="password" placeholder="Password">
-                </div>
-                <a class="text-danger" href="#">Fargot password?</a>
-                <div class="">
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <p class="accordion-header" id="headingOne">
+                      <input class="form-check-input " type="radio" aria-expanded="false" name="exampleRadios1" id="exampleRadios1" value="option1" data-bs-toggle="collapse" data-bs-target="#collapseOne"  aria-controls="collapseOne" checked>
+                      <label class="form-check-label" for="exampleRadios1">SING IN</label>
+                    </p>
+                  </div>
+                  <div class="accordion-item">
+                    <p class="accordion-header" id="headingTwo">
+                      <input class="form-check-input collapsed" aria-expanded="true"  type="radio" name="exampleRadios2" id="exampleRadios1" value="option2" data-bs-toggle="collapse" data-bs-target="#collapseTwo"  aria-controls="collapseTwo">
+                      <label class="form-check-label" for="exampleRadios2">CREATE ACCOUNT</label>
+                      </p>
+                  </div>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body p-2">
 
-              <button type="submit" class="btn btn-danger mb-3"  value="Ingresar" id="ingresar">SING IN</button>
-            </div>
-          </form>
+                    <div class="m-3">
+                      <label for="staticEmail2" class="visually">Your E-mail Adress</label>
+                      <input type="text"  class="form-control" id="usuario" placeholder="Codigo del estudiante">
+                    </div>
+
+                    <div class="m-3">
+                      <label for="inputPassword2" class="visually">Your Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="Password">
+                      <a class="text-danger m-1" href="#">Fargot password?</a>
+                    </div>
+
+                    <div class="m-4 ">
+                      <button type="submit" class="btn btn-danger mb-3"  value="Ingresar" id="ingresar">SING IN</button>
+                    </div>
+                  </div>
+                </div>
+                <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body p-2 container-center row g-3">
+
+                    <div class="col-12 col-sm-6">
+                      <label for="staticEmail2" class="visually">Your Name*</label>
+                      <input type="text"  class="form-control" id="usuario" >
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                      <label for="inputPassword2" class="visually">Your Lastname</label>
+                      <input type="text" class="form-control" id="password" >
+                    </div>
+
+                    <div class="">
+                      <label for="inputPassword2" class="visually">Your E-mail Adress*</label>
+                      <input type="text" class="form-control" id="password" >
+                    </div>
+
+                    <div class="">
+                      <label for="inputPassword2" class="visually">Your Password</label>
+                      <input type="password" class="form-control" id="password" >
+                      <span class="text-danger">Password must be 8-20 characters</span>
+                    </div>
+                    <div class="">
+                      <label for="inputPassword2" class="visually">Confirm Password</label>
+                      <input type="password" class="form-control" id="password" >
+                    </div>
+
+                    <div class="">
+                      <button type="submit" class="btn btn-danger mb-3"  value="Ingresar" id="ingresar"> REGISTER NOW</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
         </div>
       </div>
         </div>
       </div>
     </div>
+      </div>
 
 
-    <footer class="container-center text-center m-0 p-0 text-w mt-3 align-self-end">
+    <footer class="footer container-center text-center m-0 p-0 text-w mt-3 align-self-end">
       <div class="row m-0 p-0 mt-2">
         <div class="col-12 col-lg-4 badge text-wrap " >
           <img src="../image/logo.jpg" alt="Sejmet Whip´s Store" width="30%" height="auto">
