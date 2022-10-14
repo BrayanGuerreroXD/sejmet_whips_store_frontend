@@ -9,7 +9,7 @@ Las tecnologias empleadas para el desarrollo de la capa frontend del proyecto so
 
 La arquitectura que se piensa utilizar para el desarrollo del proyecto es la arquitectura MVC, la cual consiste en Model - View - Controller:
 <br>
-![mvc](/assets/resources/300px-ModelViewControllerDiagram_es.svg.png)
+![mvc](/assets/resources/1200px-ModelViewControllerDiagram_es.svg.png)
 
 El logo del proyecto es el siguientes:
 
