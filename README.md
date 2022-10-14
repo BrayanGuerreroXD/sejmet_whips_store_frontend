@@ -4,7 +4,7 @@ Sejmet Whip´s Store es un proyecto de emprendimiento que busca satisfacer las n
 
 El logo del proyecto es el siguientes:
 
-![logo](/assets/resources/logo.png){width: 100px;}
+![logo](/assets/resources/logo.png = 100x)
 
 Se realizaron diseños mockups de lo que se espera desarrollar en el proyecto:
 
@@ -12,4 +12,19 @@ Login
 ![login](/assets/images/login.png)
 
 Create account
-[!create-account](/assets/images/create%20acount.png)
+![create-account](/assets/images/create%20acount.png)
+
+Home
+![home](/assets/images/Home.png)
+
+Products
+![products](/assets/images/Products.png)
+
+Details Product - Description
+![details-product-description](/assets/images/Details%20Product%20-%20Description.png)
+
+Details Product - Instructions
+![details-product-instructions](/assets/images/Details%20Product%20-%20Instructions.png)
+
+Shopping Cart
+![shopping-cart](/assets/images/Shoppin%20Cart.png)
