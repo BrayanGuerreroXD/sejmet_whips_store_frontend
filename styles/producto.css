@@ -1,0 +1,26 @@
+.container-catalog {
+    margin: 35px 40px;
+}
+#image {
+    background-color: greenyellow;
+    width: 400px;
+}
+#imagenes {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#imagenes img{
+    margin: 20px;
+    width: 120px;
+    border-radius: 10px;
+}
+.carrousel button {
+    background-color: transparent;
+    border: none;
+}
+.images-container {
+    display: flex;
+}
