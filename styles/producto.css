@@ -3,16 +3,16 @@
   width: 100%;
 
 }
-#imagenes {
-    width: 200px;
+.images {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#imagenes img{
-    margin: 20px;
-    width: 120px;
+
+.images img{
+
+    width: 100%;
     border-radius: 10px;
 }
 .carrousel button {
@@ -21,4 +21,8 @@
 }
 .images-container {
     display: flex;
+}
+
+.star{
+  color:yellow
 }
