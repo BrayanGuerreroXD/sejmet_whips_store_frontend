@@ -9,10 +9,14 @@ let avanzarbtn = document.getElementById('avanzar');
 let retrocederbtn = document.getElementById('retroceder');
 const imagenesProducto = [
     {
-        link: "https://media.gcflearnfree.org/global/coding/html-basico/resources/img/perro-basquetbolista.png"
+        link: "https://raw.githubusercontent.com/BrayanGuerreroXD/sejmet_whips_store_frontend/main/assets/images/products_images/AZ%C3%93TAME%20ADAM%20%26%20EVE%20WHIP/AZ%C3%93TAME%20ADAM%20%26%20EVE%20WHIP%20%231.png"
     },
     {
-        link: "https://img.freepik.com/vector-gratis/fondo-diseno-web_1300-39.jpg?w=740&t=st=1669494630~exp=1669495230~hmac=c89cea9a3372cecb5643f3385962a4684ef1b4000a3a96f236a8b3fffed9c967"
+        link: "https://raw.githubusercontent.com/BrayanGuerreroXD/sejmet_whips_store_frontend/main/assets/images/products_images/AZ%C3%93TAME%20ADAM%20%26%20EVE%20WHIP/AZ%C3%93TAME%20ADAM%20%26%20EVE%20WHIP%202.webp"
+    }
+    ,
+    {
+        link: "https://raw.githubusercontent.com/BrayanGuerreroXD/sejmet_whips_store_frontend/main/assets/images/products_images/AZ%C3%93TAME%20ADAM%20%26%20EVE%20WHIP/AZ%C3%93TAME%20ADAM%20%26%20EVE%20WHIP%203.webp"
     }
 ];
 let imagenPosicion = 0;
