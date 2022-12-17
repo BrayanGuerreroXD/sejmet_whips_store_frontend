@@ -35,7 +35,7 @@ function fillColor(){
 
 function cargarProductos() {
     let innerHtml = '';
-    for(let i = 0; i < 30; i++){
+    for(let i = 0; i < 9; i++){
         innerHtml += `
             <div class="card m-2 p-2" style="width: 14rem;">
                 <img src="..." class="card-img-top" alt="...">
