@@ -1,3 +1,4 @@
+consulta();
 window.onload = function(){
     cargarImagenes();
 }
@@ -38,12 +39,40 @@ function upImagen(){
         imagenPosicion --;
         cargarImagenes();
     }
-} 
-
+}
 
 function downImagen(){
     if(imagenPosicion < imagenesProducto.length-1) {
         imagenPosicion ++;
         cargarImagenes();
     }
-} 
+}
+
+
+function consulta() {
+  fetch('http://localhost:8080/products/1')
+    .then(response => response.json())
+    .then(data => construir(data));
+
+}
+function construir(data){
+    let nameProduct = document.getElementById("strProducto1");
+    let nameProduct2 = document.getElementById("strProducto2");
+    let descriptionProduct = document.getElementById("descriptionproduct");
+    let rasgo = document.getElementById("feature");
+    let instruction = document.getElementById("Instructions");
+    let price = document.getElementById("precio");
+    let idproduct = document.getElementById("idproducto");
+    let existencia = document.getElementById("stock")
+
+    price.textContent= data.salePrice;
+    idproduct.textContent ="No."+ data.id;
+    nameProduct.textContent =data.productName;
+    nameProduct2.textContent= data.productName;
+    descriptionProduct.textContent = data.productCharacteristics;
+    rasgo.textContent= data.category.categoryDescripton;
+    instruction.textContent = data.productDescription;
+    if(data.stock>0)existencia.textContent="In stock"
+    else existencia.textContent="Out of Stock"
+    
+}
