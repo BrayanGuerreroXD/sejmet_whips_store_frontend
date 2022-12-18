@@ -45,6 +45,11 @@ function fetchData() {
         .then(data => pintarCard(data));
 }
 
+// function fetchImages() {
+//     fetch('http://localhost:8080/images')
+//         .then(response => response.json())
+//         .then(images => images(images));
+// }
 
 // Pintar las cards de los productos 
 function pintarCard(data) {
@@ -52,12 +57,16 @@ function pintarCard(data) {
         let price = templateCard.getElementById("price");
         let title = templateCard.getElementById("title");
         let description = templateCard.getElementById("description");
-        
+
         templateCard.getElementById("add_cart").dataset.id = item.id;
 
-        price.textContent = "$"+item.salePrice;
+        price.textContent = "$" + item.salePrice;
         title.textContent = item.productName;
         description.textContent = item.productDescription;
+
+        templateCard.querySelector('img').setAttribute('src', "/assets/images/products_images/" + 
+            (item.productName) + "/" + (item.productName) + " 1.jpg");
+
         const clone = templateCard.cloneNode(true);
         fragment.appendChild(clone);
     })
