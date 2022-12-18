@@ -74,5 +74,4 @@ function construir(data){
     instruction.textContent = data.productDescription;
     if(data.stock>0)existencia.textContent="In stock"
     else existencia.textContent="Out of Stock"
-    
 }
