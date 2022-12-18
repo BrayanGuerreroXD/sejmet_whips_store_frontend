@@ -55,7 +55,7 @@ function pintarCard(data) {
         
         templateCard.getElementById("add_cart").dataset.id = item.id;
 
-        price.textContent = item.salePrice;
+        price.textContent = "$"+item.salePrice;
         title.textContent = item.productName;
         description.textContent = item.productDescription;
         const clone = templateCard.cloneNode(true);
