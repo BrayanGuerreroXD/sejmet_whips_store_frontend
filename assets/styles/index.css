@@ -1,0 +1,25 @@
+#hero {
+    margin: 50px 150px;
+}
+
+.container-sm {
+    text-align: center;
+}
+
+#popular_products {
+    
+}
+
+#navbarNav {
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    margin: 30px;
+}
+
+.card {
+    width: 300px;
+    height: 550px;
+}
