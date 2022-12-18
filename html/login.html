@@ -45,7 +45,7 @@
                   <div class="accordion-item">
                     <p class="accordion-header" id="headingOne">
                       <input class="form-check-input " type="radio" aria-expanded="false" name="exampleRadios1" id="exampleRadios1" value="option1" data-bs-toggle="collapse" data-bs-target="#collapseOne"  aria-controls="collapseOne" checked>
-                      <label class="form-check-label" for="exampleRadios1">SING IN</label>
+                      <label class="form-check-label" for="exampleRadios1">SIGN IN</label>
                     </p>
                   </div>
                   <div class="accordion-item">
@@ -58,45 +58,55 @@
                   <div class="accordion-body p-2">
 
                     <div class="m-3">
-                      <label for="staticEmail2" class="visually">Your E-mail Adress</label>
-                      <input type="text"  class="form-control" id="usuario" placeholder="Codigo del estudiante">
+                      <label for="staticEmail2" class="visually">E-mail</label>
+                      <input type="text"  class="form-control" id="usuario" placeholder="Your email address">
                     </div>
 
                     <div class="m-3">
-                      <label for="inputPassword2" class="visually">Your Password</label>
-                      <input type="password" class="form-control" id="password" placeholder="Password">
+                      <label for="inputPassword2" class="visually">Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="Your password">
                       <a class="text-danger m-1" href="#">Fargot password?</a>
                     </div>
 
                     <div class="m-4 ">
-                      <button type="submit" class="btn btn-danger mb-3"  value="Ingresar" id="ingresar">SING IN</button>
+                      <button type="submit" class="btn btn-danger mb-3"  value="Ingresar" id="ingresar">SIGN IN</button>
                     </div>
                   </div>
                 </div>
                 <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                   <div class="accordion-body p-2 container-center row g-3">
 
-                    <div class="col-12 col-sm-6">
-                      <label for="staticEmail2" class="visually">Your Name*</label>
+                    <div class="">
+                      <label for="staticEmail2" class="visually">Name</label>
                       <input type="text"  class="form-control" id="usuario" >
                     </div>
 
                     <div class="col-12 col-sm-6">
-                      <label for="inputPassword2" class="visually">Your Lastname</label>
-                      <input type="text" class="form-control" id="password" >
+                      <label for="inputPassword2" class="visually">Type DNI</label>
+                      <input type="text" class="form-control" id="text" >
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                      <label for="inputPassword2" class="visually">DNI Number</label>
+                      <input type="text" class="form-control" id="DNI" >
                     </div>
 
                     <div class="">
-                      <label for="inputPassword2" class="visually">Your E-mail Adress*</label>
-                      <input type="text" class="form-control" id="password" >
+                      <label for="inputPassword2" class="visually">Address</label>
+                      <input type="text" class="form-control" id="address" >
                     </div>
 
                     <div class="">
+                      <label for="inputPassword2" class="visually">E-mail</label>
+                      <input type="text" class="form-control" id="email" >
+                    </div>
+
+                    <div class="col-12 col-sm-6">
                       <label for="inputPassword2" class="visually">Your Password</label>
                       <input type="password" class="form-control" id="password" >
                       <span class="text-danger">Password must be 8-20 characters</span>
                     </div>
-                    <div class="">
+                    <div class="col-12 col-sm-6">
                       <label for="inputPassword2" class="visually">Confirm Password</label>
                       <input type="password" class="form-control" id="password" >
                     </div>
