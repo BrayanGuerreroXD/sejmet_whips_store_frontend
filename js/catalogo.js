@@ -51,3 +51,18 @@ function cargarProductos() {
     }
     catalog.innerHTML = innerHtml;
 }   
+let categoriaone = document.getElementById("categoria1");
+let categoriaTwo = document.getElementById("categoria2");
+consulta();
+
+function consulta() {
+    fetch('http://localhost:8080/categories')
+      .then(response => response.json())
+      .then(data => construir(data));
+  
+  }
+  function construir(data){
+  
+    categoriaone.textContent = data[0].categoryName;
+    categoriaTwo.textContent = data[1].categoryName;
+  }
