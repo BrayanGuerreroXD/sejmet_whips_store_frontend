@@ -1,0 +1,17 @@
+.card img{
+    width: 300px;
+    height: 300px;
+    align-self: center;
+}
+
+.card-body h5, h4{
+    font-weight: bold;
+}
+
+.card-body h4 {
+    font-size: 15px;
+}
+
+.card-body p {
+    font-size: 10px;
+}
