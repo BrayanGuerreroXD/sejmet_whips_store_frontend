@@ -10,6 +10,7 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../styles/catalogo.css">
+    <link rel="stylesheet" href="../styles/card.css">
 </head>
 
 <body>
@@ -116,24 +117,10 @@
     </div>
 
     <!-- Template Products -->
-    <!-- <template id="template-card">
-        <div class="card m-2 p-2" style="width: 14rem;">
-            <img src="" class="card-img-top" alt="">
-            <div class="card-body">
-                <h5 class="card-title">Price</h5>
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Description</p>
-                <button id="add_cart" class="btn mb-3" style="background-color: crimson; width: 100%;">Add to cart</button>
-                <button class="btn mb-3" style="border-color: crimson; width: 100%">Buy now</button>
-                <a href="#" style="color: crimson; width: 100%">Read reviews</a>
-            </div>
-        </div>
-    </template> -->
-
     <template id="template-card">
-        <div class="col-12 mb-2 col-md-4">
+        <div id="card" class="col-12 mb-2 col-md-4">
             <div class="card">
-                <img src="" alt="" class="card-img-top">
+                <img src="" alt="" class="card-img-top" style="width: 300px; height: 300px; align-self: center;">
                 <div class="card-body">
                     <h5 id="price" class="card-title">Price</h5>
                     <h4 id="title" class="card-title">Title</h4>
