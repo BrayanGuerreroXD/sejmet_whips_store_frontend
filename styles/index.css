@@ -3,11 +3,14 @@
 }
 
 .container-sm {
+    margin-top: 100px;
     text-align: center;
 }
 
 #popular_products {
-    
+    padding-left: 120px;
+    padding-right: 50px;
+    margin-bottom: 80px;
 }
 
 #navbarNav {
