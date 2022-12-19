@@ -1,4 +1,3 @@
-
 .container-catalog {
     margin: auto;
     margin-top: 30px;
@@ -73,4 +72,8 @@ input[type="range"]::-ms-thumb{
 input[type="range"]:active::-webkit-slider-thumb{
     background-color: #ffffff;
     border: 3px solid crimson;
+}
+
+footer {
+    margin-top: 50px;
 }

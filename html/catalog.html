@@ -35,10 +35,10 @@
                         <a class="nav-link" href="/html/contac.html">CONTACT US</a>
                     </li>
                 </ul>
-                <button class="btn btn-danger  d-flex align-items-center m-1" type="button">
+                <button class="btn btn-danger  d-flex align-items-center m-1" type="button" onclick="login()">
                     <span class="material-symbols-outlined">person</span> Log in
                 </button>
-                <button type="button" name="button" class="btn btn-outline-danger  d-flex align-items-center m-1">
+                <button type="button" name="button" class="btn btn-outline-danger  d-flex align-items-center m-1" onclick="cart()">
                     <span class="material-symbols-outlined">shopping_cart</span>
                 </button>
             </div>
@@ -128,7 +128,11 @@
                     <button id="add_cart" class="btn mb-3" style="background-color: crimson; width: 100%;">Add to
                         cart</button>
                     <button class="btn mb-3" style="border-color: crimson; width: 100%">Buy now</button>
+<<<<<<< HEAD
                     <a id="vermas"href="product.html" onclick="" style="color: crimson; width: 100%">Read reviews</a>
+=======
+                    <a href="/html/product.html" style="color: crimson; width: 100%">Read more</a>
+>>>>>>> ff5027bc4bcbeb6ca19c3566208366df46e83a19
                 </div>
             </div>
         </div>
@@ -211,6 +215,14 @@
             integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
             </script>
         <script src="../js/catalogo.js"></script>
+        <script type="text/javascript">
+            function login() {
+                window.location.href = "login.html";
+            }
+            function cart() {
+                window.location.href = "shopping_cart.html";
+            }
+        </script>
     </div>
 </body>
 
