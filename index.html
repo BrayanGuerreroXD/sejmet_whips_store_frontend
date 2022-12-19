@@ -34,10 +34,10 @@
                     <button type="button" name="button" class="btn btn-outline-danger  d-flex align-items-center m-1">
                         <i class="bi bi-heart-fill"></i>
                     </button>
-                    <button type="button" name="button" class="btn btn-outline-danger  d-flex align-items-center m-1">
+                    <button type="button" name="button" class="btn btn-outline-danger  d-flex align-items-center m-1" onclick = "cart()">
                         <i class="bi bi-cart-fill"></i>
                     </button>
-                    <button type="button" name="button" class="btn btn-outline-danger  d-flex align-items-center m-1">
+                    <button type="button" name="button" class="btn btn-outline-danger  d-flex align-items-center m-1" onclick = "login()">
                         <i class="bi bi-person-fill"></i>
                     </button>
                 </div>
@@ -282,6 +282,15 @@
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
+
+    <script type="text/javascript">
+        function login() {
+            window.location.href = "/html/login.html";
+        }
+        function cart() {
+            window.location.href = "/html/shopping_cart.html";
+        }
+    </script>
 </body>
 
 </html>
