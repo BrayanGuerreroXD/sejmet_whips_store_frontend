@@ -51,12 +51,14 @@ function pintarCard(data) {
         let price = templateCard.getElementById("price");
         let title = templateCard.getElementById("title");
         let description = templateCard.getElementById("description");
+        let vermas= templateCard.getElementById("vermas")
 
         templateCard.getElementById("add_cart").dataset.id = item.id;
 
         price.textContent = "$" + item.salePrice;
         title.textContent = item.productName;
         description.textContent = item.productDescription;
+        vermas.setAttribute(onclick,"enviarproducto("+item.id+")")
 
         templateCard.querySelector('img').setAttribute('src', "/assets/images/products_images/" + 
             (item.productName) + "/" + (item.productName) + " 1.jpg");
@@ -65,6 +67,10 @@ function pintarCard(data) {
         fragment.appendChild(clone);
     })
     catalog.appendChild(fragment);
+}
+
+function enviarproducto(item) {
+    localStorage.setItem('id', item);
 }
 const urlcategorias='http://localhost:8080/categories'
 
