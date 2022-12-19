@@ -10,7 +10,7 @@ let avanzarbtn = document.getElementById('avanzar');
 let retrocederbtn = document.getElementById('retroceder');
 const imagenesProducto = [
     {
-        link: "https://raw.githubusercontent.com/BrayanGuerreroXD/sejmet_whips_store_frontend/main/assets/images/products_images/AZ%C3%93TAME%20ADAM%20%26%20EVE%20WHIP/AZ%C3%93TAME%20ADAM%20%26%20EVE%20WHIP%20%231.png"
+        link: "https://raw.githubusercontent.com/BrayanGuerreroXD/sejmet_whips_store_frontend/main/assets/images/products_images/AZ%C3%93TAME%20ADAM%20%26%20EVE%20WHIP/AZ%C3%93TAME%20ADAM%20%26%20EVE%20WHIP%20%231.jpg"
     },
     {
         link: "https://raw.githubusercontent.com/BrayanGuerreroXD/sejmet_whips_store_frontend/main/assets/images/products_images/AZ%C3%93TAME%20ADAM%20%26%20EVE%20WHIP/AZ%C3%93TAME%20ADAM%20%26%20EVE%20WHIP%202.webp"
@@ -59,6 +59,7 @@ function construir(data){
     let nameProduct = document.getElementById("strProducto1");
     let nameProduct2 = document.getElementById("strProducto2");
     let descriptionProduct = document.getElementById("descriptionproduct");
+    let charasteristicsProduct = document.getElementById("characteristicsproduct");
     let rasgo = document.getElementById("feature");
     let instruction = document.getElementById("Instructions");
     let price = document.getElementById("precio");
@@ -69,7 +70,8 @@ function construir(data){
     idproduct.textContent ="No."+ data.id;
     nameProduct.textContent =data.productName;
     nameProduct2.textContent= data.productName;
-    descriptionProduct.textContent = data.productCharacteristics;
+    descriptionProduct.textContent = data.productDescription;
+    charasteristicsProduct.textContent = data.productCharacteristics;
     rasgo.textContent= data.category.categoryDescripton;
     instruction.textContent = data.productDescription;
     if(data.stock>0)existencia.textContent="In stock"
