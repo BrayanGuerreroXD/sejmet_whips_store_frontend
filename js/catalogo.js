@@ -73,11 +73,10 @@ function pintarCard(data) {
     catalog.appendChild(fragment);
 }
 const urlcategorias='http://localhost:8080/categories'
-const urlProductos='http://localhost:8080/products/'
 
 let categoriaone = document.getElementById("categoria1");
 let categoriaTwo = document.getElementById("categoria2");
-
+consulta(urlcategorias);
 
 function consulta(url) {
     fetch(url)
