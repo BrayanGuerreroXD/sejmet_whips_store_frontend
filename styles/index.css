@@ -3,11 +3,14 @@
 }
 
 .container-sm {
+    margin-top: 100px;
     text-align: center;
 }
 
 #popular_products {
-    
+    padding-left: 120px;
+    padding-right: 50px;
+    margin-bottom: 80px;
 }
 
 #navbarNav {
@@ -22,4 +25,24 @@
 .card {
     width: 300px;
     height: 550px;
+}
+
+#features {
+    margin: 100px;
+    padding-left: 250px;
+}
+
+#features i {
+    font-size: 30px;
+    color:crimson;
+}
+
+#photos {
+    width: 1500px;
+    padding-left: 350px;
+    margin-bottom: 100px;
+}
+
+#gallery img {
+    box-shadow: 2px 2px 5px #999;
 }
