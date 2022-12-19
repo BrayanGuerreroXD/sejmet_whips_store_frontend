@@ -1,4 +1,4 @@
-const data_id = parseInt(localStorage.getItem('data_id'));
+const data_id = parseInt(localStorage.getItem('id'));
 
 consulta();
 window.onload = function () {
