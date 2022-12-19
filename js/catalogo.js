@@ -45,12 +45,6 @@ function fetchData() {
         .then(data => pintarCard(data));
 }
 
-// function fetchImages() {
-//     fetch('http://localhost:8080/images')
-//         .then(response => response.json())
-//         .then(images => images(images));
-// }
-
 // Pintar las cards de los productos 
 function pintarCard(data) {
     data.forEach(item => {
@@ -89,21 +83,3 @@ function consulta(url) {
     categoriaone.textContent = data[0].categoryName;
     categoriaTwo.textContent = data[1].categoryName;
   }
-// function cargarProductos() {
-//     let innerHtml = '';
-//     for(let i = 0; i < 9; i++){
-//         innerHtml += `
-//             <div class="card m-2 p-2" style="width: 14rem;">
-//                 <img src="..." class="card-img-top" alt="...">
-//                 <div class="card-body">
-//                     <h5 class="card-title">APHRODISIA LEATHER WHIP</h5>
-//                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//                     <button class="btn mb-3" style="background-color: crimson; width: 100%;">Add to cart</button>
-//                     <button class="btn mb-3" style="border-color: crimson; width: 100%">Buy now</button>
-//                     <a href="#" style="color: crimson; width: 100%">Read reviews</a>
-//                 </div>
-//             </div>
-//         `;
-//     }
-//     catalog.innerHTML = innerHtml;
-// }   
