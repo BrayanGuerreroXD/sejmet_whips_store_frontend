@@ -76,16 +76,16 @@ let categoriaTwo = document.getElementById("categoria2");
 consulta(urlcategorias);
 
 
+// Load JSON from url
 function consulta(url) {
     fetch(url)
         .then(response => response.json())
         .then(data => construir(data));
-
 }
 
 
+// Category name creator
 function construir(data) {
-
     categoriaone.textContent = data[0].categoryName;
     categoriaTwo.textContent = data[1].categoryName;
 }
