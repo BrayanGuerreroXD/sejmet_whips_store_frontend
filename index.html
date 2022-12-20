@@ -34,10 +34,12 @@
                     <button type="button" name="button" class="btn btn-outline-danger  d-flex align-items-center m-1">
                         <i class="bi bi-heart-fill"></i>
                     </button>
-                    <button type="button" name="button" class="btn btn-outline-danger  d-flex align-items-center m-1" onclick = "cart()">
+                    <button type="button" name="button" class="btn btn-outline-danger  d-flex align-items-center m-1"
+                        onclick="cart()">
                         <i class="bi bi-cart-fill"></i>
                     </button>
-                    <button type="button" name="button" class="btn btn-outline-danger  d-flex align-items-center m-1" onclick = "login()">
+                    <button type="button" name="button" class="btn btn-outline-danger  d-flex align-items-center m-1"
+                        onclick="login()">
                         <i class="bi bi-person-fill"></i>
                     </button>
                 </div>
@@ -95,16 +97,18 @@
                 <div class="card">
                     <div id="card" class="col-12 mb-2 col-md-4">
                         <div class="card">
-                            <img id="img_product"
-                                src="/assets/images/products_images/APHRODISIA LEATHER WHIP/APHRODISIA LEATHER WHIP 1.jpg"
-                                alt="" class="card-img-top">
+                            <a href="/html/product.html" onclick="product()">
+                                <img id="img_aphrodisia"
+                                    src="/assets/images/products_images/APHRODISIA LEATHER WHIP/APHRODISIA LEATHER WHIP 1.jpg"
+                                    alt="" class="card-img-top">
+                            </a>
                             <div class="card-body">
                                 <h5 id="price" class="card-title">$35000</h5>
                                 <h4 id="title" class="card-title">APHRODISIA LEATHER WHIP</h4>
                                 <p id="description" class="card-text">Nine intertwined leather tails hang from a strong
                                     handle. Every time you touch his skin with it, you will see how your kind servant
                                     understands your instructions at the first time</p>
-                                <button id="add_cart" class="btn mb-3"
+                                <button id="add_cart_aprhodisia" class="btn mb-3" onclick="cart()"
                                     style="background-color: crimson; width: 100%;">Add to
                                     cart</button>
                                 <button class="btn mb-3" style="border-color: crimson; width: 100%">Buy now</button>
@@ -117,15 +121,17 @@
                 <div class="card">
                     <div id="card" class="col-12 mb-2 col-md-4">
                         <div class="card">
-                            <img id="img_product"
-                                src="/assets/images/products_images/SADOMASOCHISTIC PADDLE/SADOMASOCHISTIC PADDLE 1.jpg"
-                                alt="" class="card-img-top">
+                            <a href="/html/product.html" onclick="product()">
+                                <img id="img_paddle"
+                                    src="/assets/images/products_images/SADOMASOCHISTIC PADDLE/SADOMASOCHISTIC PADDLE 1.jpg"
+                                    alt="" class="card-img-top">
+                            </a>
                             <div class="card-body">
                                 <h5 id="price" class="card-title">$45000</h5>
                                 <h4 id="title" class="card-title">SADOMASOCHISTIC PADDLE</h4>
                                 <p id="description" class="card-text">Design of exciting sound when touching your body,
                                     soft contact with your skin. How do you want to mark your lover?</p>
-                                <button id="add_cart" class="btn mb-3"
+                                <button id="add_cart_paddle" class="btn mb-3" onclick="cart()"
                                     style="background-color: crimson; width: 100%;">Add to
                                     cart</button>
                                 <button class="btn mb-3" style="border-color: crimson; width: 100%">Buy now</button>
@@ -138,15 +144,17 @@
                 <div class="card">
                     <div id="card" class="col-12 mb-2 col-md-4">
                         <div class="card">
-                            <img id="img_product" src="/assets/images/products_images/SPADE WHIP/SPADE WHIP 1.jpg"
-                                alt="" class="card-img-top">
+                            <a href="/html/product.html" onclick="product()">
+                                <img id="img_spade" src="/assets/images/products_images/SPADE WHIP/SPADE WHIP 1.jpg"
+                                    alt="" class="card-img-top">
+                            </a>
                             <div class="card-body">
                                 <h5 id="price" class="card-title">$35000</h5>
                                 <h4 id="title" class="card-title">SPADE WHIP</h4>
                                 <p id="description" class="card-text">Dare to change the monotony of the bedroom and
                                     enjoy rough sex. It can be used for flirting between partners, such as spanking or
                                     hip touching</p>
-                                <button id="add_cart" class="btn mb-3"
+                                <button id="add_cart_spade" class="btn mb-3" onclick="cart()"
                                     style="background-color: crimson; width: 100%;">Add to
                                     cart</button>
                                 <button class="btn mb-3" style="border-color: crimson; width: 100%">Buy now</button>
@@ -176,7 +184,8 @@
                     <p>The Best Quality</p>
                 </div>
             </div>
-            <div class="d-flex align-items-center bg-light mb-1 bg-transparent" style="height: 100px; width: 400px; margin-left: 140px;">
+            <div class="d-flex align-items-center bg-light mb-1 bg-transparent"
+                style="height: 100px; width: 400px; margin-left: 140px;">
                 <div class="col">
                     <i class="bi bi-speedometer2"></i>
                     <p>Fast Delivery</p>
@@ -188,7 +197,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <!-- Gallery -->
     <section id="photos">
@@ -197,11 +206,11 @@
                 <img src="/assets/images/products_images/AZÓTAME ADAM & EVE WHIP/AZÓTAME ADAM & EVE WHIP 1.jpg"
                     class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
 
-                    <img src="/assets/images/products_images/APHRODISIA LEATHER WHIP/APHRODISIA LEATHER WHIP 1.jpg"
+                <img src="/assets/images/products_images/APHRODISIA LEATHER WHIP/APHRODISIA LEATHER WHIP 1.jpg"
                     class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
             </div>
 
-            <div id = "gallery" class="col-lg-4 mb-4 mb-lg-0">
+            <div id="gallery" class="col-lg-4 mb-4 mb-lg-0">
                 <img src="/assets/images/products_images/SADOMASOCHISTIC PADDLE/SADOMASOCHISTIC PADDLE 1.jpg"
                     class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" />
 
@@ -283,12 +292,17 @@
     </footer>
     <!-- Footer -->
 
+    <script src="/js/index.js"></script>
+
     <script type="text/javascript">
         function login() {
             window.location.href = "/html/login.html";
         }
         function cart() {
             window.location.href = "/html/shopping_cart.html";
+        }
+        function product() {
+            window.location.href = '/html/product.html';
         }
     </script>
 </body>
