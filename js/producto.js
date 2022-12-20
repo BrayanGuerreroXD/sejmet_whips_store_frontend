@@ -1,4 +1,4 @@
-const data_id = parseInt(localStorage.getItem('id'));
+const product_id = localStorage.getItem('id');
 
 consulta();
 window.onload = function () {
@@ -68,7 +68,7 @@ function downImagen() {
 }
 
 function consulta() {
-    fetch('http://localhost:8080/products/' + data_id)
+    fetch('http://localhost:8080/products/' + product_id)
         .then(response => response.json())
         .then(data => construir(data));
 }

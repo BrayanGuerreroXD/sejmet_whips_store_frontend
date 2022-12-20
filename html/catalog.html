@@ -38,7 +38,8 @@
                 <button class="btn btn-danger  d-flex align-items-center m-1" type="button" onclick="login()">
                     <span class="material-symbols-outlined">person</span> Log in
                 </button>
-                <button type="button" name="button" class="btn btn-outline-danger  d-flex align-items-center m-1" onclick="cart()">
+                <button type="button" name="button" class="btn btn-outline-danger  d-flex align-items-center m-1"
+                    onclick="cart()">
                     <span class="material-symbols-outlined">shopping_cart</span>
                 </button>
             </div>
@@ -110,7 +111,7 @@
             </div>
             <div class="col-9">
                 <div class="d-flex flex-wrap justify-content-center px-4" id="catalogo">
-                    
+
                 </div>
             </div>
         </div>
@@ -120,7 +121,7 @@
     <template id="template-card">
         <div id="card" class="col-12 mb-2 col-md-4">
             <div class="card">
-                <img id ="img_product" src="" alt="" class="card-img-top">
+                <img id="img_product" src="" alt="" class="card-img-top">
                 <div class="card-body">
                     <h5 id="price" class="card-title">Price</h5>
                     <h4 id="title" class="card-title">Title</h4>
@@ -128,7 +129,7 @@
                     <button id="add_cart" class="btn mb-3" style="background-color: crimson; width: 100%;">Add to
                         cart</button>
                     <button class="btn mb-3" style="border-color: crimson; width: 100%">Buy now</button>
-                    <a id="vermas"href="product.html" onclick="" style="color: crimson; width: 100%">Read reviews</a>
+                    <a id="vermas" href="/html/product.html" onclick = "product()" style="color: crimson; width: 100%">Read more</a>
 
                 </div>
             </div>
@@ -218,6 +219,9 @@
             }
             function cart() {
                 window.location.href = "shopping_cart.html";
+            }
+            function product() {
+                window.location.href = 'product.html';
             }
         </script>
     </div>
