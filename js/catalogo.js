@@ -51,9 +51,10 @@ function pintarCard(data) {
         let price = templateCard.getElementById("price");
         let title = templateCard.getElementById("title");
         let description = templateCard.getElementById("description");
-
+        
         templateCard.getElementById("add_cart").dataset.id = item.id;
         templateCard.getElementById("vermas").dataset.id = item.id;
+        templateCard.querySelector('img').dataset.id = item.id;
 
         price.textContent = "$" + item.salePrice;
         title.textContent = item.productName;
