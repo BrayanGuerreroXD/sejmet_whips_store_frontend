@@ -29,11 +29,30 @@ function contra(json, contraceña) {
   if (json.password === contraceña) {
     localStorage.setItem("email",json.email);
     localStorage.setItem("password",json.password);
-    console.log(json.password+ " -> " + contraceña);
-    console.log("esta funcionando");
-    window.location.href = "catalog.html";
+    //console.log(json.password+ " -> " + contraceña);
+    //console.log("esta funcionando");
+    //window.location.href = "catalog.html";
   }else{
-    console.log("no funciona");
-    console.log(json.password + " -> " + contraceña);
+    //console.log("no funciona");
+    ///console.log(json.password + " -> " + contraceña);
+}
+}
+
+function select(string) {
+  let menu =document.getElementById("typeDNI");
+  menu.innerText=string;
+
+}
+function validar() {
+  let password =document.getElementById("password2");
+  let passwordV =document.getElementById("passwordvalidate");
+
+  if (password.value==passwordV.value) {
+    passwordV.setAttribute("class","form-control is-valid");
+    console.log(password.value + " -> "+ passwordV.value + "valido");
+  }
+ else{
+  passwordV.setAttribute("class","form-control is-invalid");
+  
 }
 }
