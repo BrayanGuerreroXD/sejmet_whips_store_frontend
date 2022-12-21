@@ -51,14 +51,16 @@ function pintarCard(data) {
         let price = templateCard.getElementById("price");
         let title = templateCard.getElementById("title");
         let description = templateCard.getElementById("description");
-
+        
         templateCard.getElementById("add_cart").dataset.id = item.id;
+        templateCard.getElementById("vermas").dataset.id = item.id;
+        templateCard.querySelector('img').dataset.id = item.id;
 
         price.textContent = "$" + item.salePrice;
         title.textContent = item.productName;
         description.textContent = item.productDescription;
 
-        templateCard.querySelector('img').setAttribute('src', "/assets/images/products_images/" + 
+        templateCard.querySelector('img').setAttribute('src', "/assets/images/products_images/" +
             (item.productName) + "/" + (item.productName) + " 1.jpg");
 
         const clone = templateCard.cloneNode(true);
@@ -66,20 +68,40 @@ function pintarCard(data) {
     })
     catalog.appendChild(fragment);
 }
-const urlcategorias='http://localhost:8080/categories'
+
+
+const urlcategorias = 'http://localhost:8080/categories'
 
 let categoriaone = document.getElementById("categoria1");
 let categoriaTwo = document.getElementById("categoria2");
 consulta(urlcategorias);
 
+
+// Load JSON from url
 function consulta(url) {
     fetch(url)
-      .then(response => response.json())
-      .then(data => construir(data));
-  
-  }
-  function construir(data){
-  
+        .then(response => response.json())
+        .then(data => construir(data));
+}
+
+
+// Category name creator
+function construir(data) {
     categoriaone.textContent = data[0].categoryName;
     categoriaTwo.textContent = data[1].categoryName;
-  }
+}
+
+
+// Load data-id of card button "Add to cart"
+document.addEventListener('click', function (e) {
+    e.preventDefault();
+    let elemento = e.target;
+    let dataID = elemento.getAttribute('data-id');
+    enviarproducto(dataID);
+});
+
+
+// Load the id variable in the localstorage
+function enviarproducto(item) {
+    localStorage.setItem('id', item);
+}
