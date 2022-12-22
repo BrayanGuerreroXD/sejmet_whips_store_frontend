@@ -31,7 +31,7 @@ function contra(json, contraceña) {
     localStorage.setItem("password",json.password);
     //console.log(json.password+ " -> " + contraceña);
     //console.log("esta funcionando");
-    window.location.href = "catalog.html";
+    window.location.href = "../html/catalog.html";
   }else{
     //console.log("no funciona");
     ///console.log(json.password + " -> " + contraceña);
