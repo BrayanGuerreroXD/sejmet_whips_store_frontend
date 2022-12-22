@@ -16,36 +16,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 }
 )
 
-// items.addEventListener('click', e=>{
-// 	btnAccion(e)
-// })
-
-// const addCarrito = e =>{
-// 	if(e.target.classList.contains('btn-dark')){
-// 		setCarrito(e.target.parentElement)
-// 	}
-
-// e.stopPropagation()
-// }
-
-
-// const setCarrito = item => {
-// 	const producto = {
-// 		title: item.querySelector('h5').textContent,
-// 		precio: item.querySelector('p').textContent,
-// 		id: item.querySelector('.btn-dark').dataset.id,
-// 		cantidad: 1
-// 	}
-
-// 	if(carrito.hasOwnProperty(producto.id)){
-// 		producto.cantidad = carrito[producto.id].cantidad + 1
-// 	}
-
-// 	carrito[producto.id] = { ...producto}
-// 	pintarCarrito()
-// }
-
-
 const pintarCarrito = ()=> {
 	
 	items.innerHTML = ''
@@ -55,7 +25,7 @@ const pintarCarrito = ()=> {
 		templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
 		templateCarrito.querySelector('.btn-info').dataset.id = producto.id
 		templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
-		templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio
+		templateCarrito.querySelector('span').textContent = producto.cantidad * producto.price
 		const clone = templateCarrito.cloneNode(true)
 		fragment.appendChild(clone)
 	})
@@ -78,7 +48,7 @@ const pintarFooter = () => {
 		}
 
 		const nCantidad = Object.values(carrito).reduce((acc, {cantidad})=> acc + cantidad, 0)
-		const nPrecio = Object.values(carrito).reduce((acc, {cantidad, precio}) => acc + cantidad * precio, 0)
+		const nPrecio = Object.values(carrito).reduce((acc, {cantidad, price}) => acc + cantidad * price, 0)
 		
 		templateFooter.querySelectorAll('td')[0].textContent = nCantidad
 		templateFooter.querySelector('span').textContent = nPrecio

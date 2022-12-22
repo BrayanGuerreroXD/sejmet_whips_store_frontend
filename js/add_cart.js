@@ -44,7 +44,7 @@ function addCart(data) {
     const product = {
         id: id,
         title: data.productName,
-        price: data.salePrice,
+        price: parseInt(data.salePrice),
         cantidad: 1
     }
 

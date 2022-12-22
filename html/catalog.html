@@ -26,13 +26,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
+                        <a class="nav-link active" aria-current="page" href="../index.html" onclick="home()">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/html/catalog.html">PRODUCTS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/html/contac.html">CONTACT US</a>
+                        <a class="nav-link" href="/html/contac.html" onclick="contact()">CONTACT US</a>
                     </li>
                 </ul>
                 <button class="btn btn-danger  d-flex align-items-center m-1" type="button" onclick="login()">
@@ -128,7 +128,8 @@
                     <h5 id="price" class="card-title">Price</h5>
                     <h4 id="title" class="card-title">Title</h4>
                     <p id="description" class="card-text">Description</p>
-                    <button id="add_cart" class="btn btn-dark" onclick = "reload()" style="background-color: crimson; width: 100%;">Add to
+                    <button id="add_cart" class="btn btn-dark" onclick="reload()"
+                        style="background-color: crimson; width: 100%;">Add to
                         cart</button>
                     <button class="btn mb-3" style="border-color: crimson; width: 100%">Buy now</button>
                     <a id="vermas" href="/html/product.html" onclick="product()"
@@ -226,6 +227,12 @@
             }
             function product() {
                 window.location.href = 'product.html';
+            }
+            function contact() {
+                window.location.href = '../html/contac.html'
+            }
+            function home() {
+                window.location.href = '../index.html'
             }
             function reload() {
                 location.reload();
