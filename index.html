@@ -54,10 +54,10 @@
                             <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/html/catalog.html">PRODUCTS</a>
+                            <a class="nav-link" href="/html/catalog.html" onclick="catalog()">PRODUCTS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/html/contac.html">CONTACT</a>
+                            <a class="nav-link" href="/html/contac.html" onclick="contact()">CONTACT</a>
                         </li>
                     </ul>
                 </div>
@@ -108,7 +108,7 @@
                                 <p id="description" class="card-text">Nine intertwined leather tails hang from a strong
                                     handle. Every time you touch his skin with it, you will see how your kind servant
                                     understands your instructions at the first time</p>
-                                <button id="add_cart_aprhodisia" class="btn mb-3" onclick="cart()"
+                                <button id="add_cart_aprhodisia" class="btn btn-dark" onclick="reload()"
                                     style="background-color: crimson; width: 100%;">Add to
                                     cart</button>
                                 <button class="btn mb-3" style="border-color: crimson; width: 100%">Buy now</button>
@@ -131,7 +131,7 @@
                                 <h4 id="title" class="card-title">SADOMASOCHISTIC PADDLE</h4>
                                 <p id="description" class="card-text">Design of exciting sound when touching your body,
                                     soft contact with your skin. How do you want to mark your lover?</p>
-                                <button id="add_cart_paddle" class="btn mb-3" onclick="cart()"
+                                <button id="add_cart_paddle" class="btn mb-3" onclick="reload()"
                                     style="background-color: crimson; width: 100%;">Add to
                                     cart</button>
                                 <button class="btn mb-3" style="border-color: crimson; width: 100%">Buy now</button>
@@ -154,7 +154,7 @@
                                 <p id="description" class="card-text">Dare to change the monotony of the bedroom and
                                     enjoy rough sex. It can be used for flirting between partners, such as spanking or
                                     hip touching</p>
-                                <button id="add_cart_spade" class="btn mb-3" onclick="cart()"
+                                <button id="add_cart_spade" class="btn mb-3" onclick="reload()"
                                     style="background-color: crimson; width: 100%;">Add to
                                     cart</button>
                                 <button class="btn mb-3" style="border-color: crimson; width: 100%">Buy now</button>
@@ -294,6 +294,8 @@
 
     <script src="/js/index.js"></script>
 
+    <script src="/js/add_cart.js"></script>
+
     <script type="text/javascript">
         function login() {
             window.location.href = "/html/login.html";
@@ -303,6 +305,17 @@
         }
         function product() {
             window.location.href = '/html/product.html';
+        }
+        function catalog() {
+            window.location.href = '../html/catalog.html';
+        }
+        function contact() {
+            window.location.href = '../html/contac.html'
+        }
+
+        function reload() {
+            location.reload();
+            return false;
         }
     </script>
 </body>

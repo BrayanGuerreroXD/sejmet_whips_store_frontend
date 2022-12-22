@@ -121,17 +121,18 @@
     <template id="template-card">
         <div id="card" class="col-12 mb-2 col-md-4">
             <div class="card">
-                <a href="/html/product.html" onclick = "product()">
+                <a href="/html/product.html" onclick="product()">
                     <img id="img_product" src="" alt="" class="card-img-top">
                 </a>
                 <div class="card-body">
                     <h5 id="price" class="card-title">Price</h5>
                     <h4 id="title" class="card-title">Title</h4>
                     <p id="description" class="card-text">Description</p>
-                    <button id="add_cart" class="btn mb-3" onclick="cart()" style="background-color: crimson; width: 100%;">Add to
+                    <button id="add_cart" class="btn btn-dark" onclick = "reload()" style="background-color: crimson; width: 100%;">Add to
                         cart</button>
                     <button class="btn mb-3" style="border-color: crimson; width: 100%">Buy now</button>
-                    <a id="vermas" href="/html/product.html" onclick = "product()" style="color: crimson; width: 100%">Read more</a>
+                    <a id="vermas" href="/html/product.html" onclick="product()"
+                        style="color: crimson; width: 100%">Read more</a>
                 </div>
             </div>
         </div>
@@ -214,15 +215,21 @@
             integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
             </script>
         <script src="../js/catalogo.js"></script>
+        <script src="/js/add_cart.js"></script>
         <script type="text/javascript">
             function login() {
                 window.location.href = "login.html";
             }
+
             function cart() {
-                window.location.href = "shopping_cart.html";
+                window.location.href = "/html/shopping_cart.html";
             }
             function product() {
                 window.location.href = 'product.html';
+            }
+            function reload() {
+                location.reload();
+                return false;
             }
         </script>
     </div>

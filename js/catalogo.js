@@ -1,3 +1,7 @@
+const cards = document.getElementById('card');
+const templateCard = document.getElementById('template-card').content;
+const fragment = document.createDocumentFragment();
+
 fetchData();
 window.onload = function () {
     slideOne();
@@ -14,8 +18,6 @@ let sliderTrack = document.querySelector(".slider-track");
 let sliderMaxValue = document.getElementById("slider-1").max;
 
 let catalog = document.getElementById("catalogo");
-const templateCard = document.getElementById('template-card').content;
-const fragment = document.createDocumentFragment();
 
 function slideOne() {
     if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
