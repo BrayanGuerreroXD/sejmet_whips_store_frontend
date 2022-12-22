@@ -1,54 +1,43 @@
-//const card = document.getElementById('card');
+const card = document.getElementById('card');
 
 let carrito = {}
 let id = localStorage.getItem('id');
 
-
 document.addEventListener('DOMContentLoaded', () => {
-    fetchProduct()
-    carrito = localStorage.getItem('carrito');
-    if (carrito === null) {
-        carrito = [];
-    } else {
-        carrito = JSON.parse(carrito);
+    fetchProduct();
+    if (localStorage.getItem('carrito')) {
+        carrito = JSON.parse(localStorage.getItem('carrito'));
     }
 }
 )
 
-const fetchProduct = async()=>{
-	try{
-		const res = await fetch('http://localhost:8080/products/'+id)
-		const data = await res.json()
-		addCart(data)
+const fetchProduct = async () => {
+    try {
+        const res = await fetch('http://localhost:8080/products/' + id)
+        const data = await res.json()
+        addCart(data)
 
-	}catch(error){
-		console.log(error)
-	}
+    } catch (error) {
+        console.log(error)
+    }
 }
 
-//console.log(card);
+if (card) {
+    card.addEventListener('click', e => {
+        consultar(e)
+        // location.reload();
+    });
+}
 
-// if (card) {
-//     card.addEventListener('click', e =>{
-//         consultar(e)
-//     });
-// }
+const consultar = e => {
+    console.log(e.target)
+    console.log(e.target.classList.contains('btn-dark'))
+    if (e.target.classList.contains('btn-dark')) {
+        addCart();
+    }
 
-// const consultar = e => {
-//     console.log(e.target)
-//     if (e.target.classList.contains('btn-dark')) {
-//         fetchProduct();
-//     }
-
-//     e.stopPropagation()
-// }
-
-// // Cargar datos del producto por ID
-// function fetchProduct() {
-//     fetch('http://localhost:8080/products/'+id)
-//         .then(response => response.json())
-//         .then(data => addCart(data));
-// }
+    e.stopPropagation()
+}
 
 function addCart(data) {
     const product = {
