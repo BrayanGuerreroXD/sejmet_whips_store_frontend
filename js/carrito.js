@@ -1,4 +1,4 @@
-const cards = document.getElementById('cards')
+const cards = document.getElementById('card')
 const templateCard = document.getElementById('template-card').content
 const items = document.getElementById('items')
 const footer = document.getElementById('footer')
@@ -25,32 +25,8 @@ items.addEventListener('click', e=>{
 	btnAccion(e)
 })
 
-const fetchData = async()=>{
-	try{
-		const res = await fetch('productos.json')
-		const data = await res.json()
-		pintarCard(data)
-
-	}catch(error){
-		console.log(error)
-	}
-}
-
-const pintarCard = data=>{
-	data.forEach(item => {
-		templateCard.querySelector('h5').textContent = item.title
-		templateCard.querySelector('p').textContent = item.precio
-		templateCard.querySelector('img').setAttribute('src', item.thumbnailUrl)
-		templateCard.querySelector('.btn-dark').dataset.id = item.id
-		const clone = templateCard.cloneNode(true)
-		fragment.appendChild(clone)
-	})
-	cards.appendChild(fragment)
-}
 
 const addCarrito = e =>{
-	//console.log(e.target)
-	//console.log(e.target.classList.contains('btn-dark'))
 	if(e.target.classList.contains('btn-dark')){
 		setCarrito(e.target.parentElement)
 	}
@@ -59,9 +35,7 @@ e.stopPropagation()
 }
 
 
-
 const setCarrito = item => {
-	//console.log(objeto)
 	const producto = {
 		title: item.querySelector('h5').textContent,
 		precio: item.querySelector('p').textContent,
@@ -76,6 +50,7 @@ const setCarrito = item => {
 	carrito[producto.id] = { ...producto}
 	pintarCarrito()
 }
+
 
 const pintarCarrito = ()=> {
 	
@@ -96,8 +71,8 @@ const pintarCarrito = ()=> {
 	pintarFooter()
 
 	localStorage.setItem('carrito', JSON.stringify(carrito))
-
 }
+
 
 const pintarFooter = () => {
 		footer.innerHTML = ''
