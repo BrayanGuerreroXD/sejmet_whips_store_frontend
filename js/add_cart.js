@@ -25,7 +25,8 @@ const fetchProduct = async () => {
 if (card) {
     card.addEventListener('click', e => {
         consultar(e)
-        // location.reload();
+        location.reload();
+        return false;
     });
 }
 
