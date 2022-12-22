@@ -121,7 +121,7 @@
     <template id="template-card">
         <div id="card" class="col-12 mb-2 col-md-4">
             <div class="card">
-                <a href="/html/product.html" onclick = "product()">
+                <a href="/html/product.html" onclick="product()">
                     <img id="img_product" src="" alt="" class="card-img-top">
                 </a>
                 <div class="card-body">
@@ -131,7 +131,8 @@
                     <button id="add_cart" class="btn btn-dark" style="background-color: crimson; width: 100%;">Add to
                         cart</button>
                     <button class="btn mb-3" style="border-color: crimson; width: 100%">Buy now</button>
-                    <a id="vermas" href="/html/product.html" onclick = "product()" style="color: crimson; width: 100%">Read more</a>
+                    <a id="vermas" href="/html/product.html" onclick="product()"
+                        style="color: crimson; width: 100%">Read more</a>
                 </div>
             </div>
         </div>
@@ -218,6 +219,10 @@
         <script type="text/javascript">
             function login() {
                 window.location.href = "login.html";
+            }
+
+            function cart() {
+                window.location.href = "/html/shopping_cart.html";
             }
             function product() {
                 window.location.href = 'product.html';
