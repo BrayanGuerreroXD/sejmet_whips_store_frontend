@@ -17,21 +17,21 @@ function consulta() {
     correo = email.value;
     pass = contraceña.value;
   }  
-  console.log(correo + " -> "+ pass);
+  //console.log(correo + " -> "+ pass);
   fetch("http://localhost:8080/users/findByEmail/"+correo)
     .then(response => response.json())
     .then(json => contra(json, pass));
 }
 
 function contra(json, contraceña) {
- console.log(json);
+ //console.log(json);
 
   if (json.password === contraceña) {
     localStorage.setItem("email",json.email);
     localStorage.setItem("password",json.password);
     //console.log(json.password+ " -> " + contraceña);
     //console.log("esta funcionando");
-    //window.location.href = "catalog.html";
+    window.location.href = "catalog.html";
   }else{
     //console.log("no funciona");
     ///console.log(json.password + " -> " + contraceña);
@@ -49,10 +49,61 @@ function validar() {
 
   if (password.value==passwordV.value) {
     passwordV.setAttribute("class","form-control is-valid");
-    console.log(password.value + " -> "+ passwordV.value + "valido");
+    //console.log(password.value + " -> "+ passwordV.value + "valido");
   }
  else{
   passwordV.setAttribute("class","form-control is-invalid");
   
 }
+}
+function valiadaremail() {
+  
+  let emailform=document.getElementById("email");
+  console.log(emailform.value);
+  fetch("http://localhost:8080/users/findByEmail/"+emailform.value)
+  .then(response => response.json())
+  .then(json =>email(json,emailform));
+
+}
+
+function email(json,emailform) {
+  console.log(json);
+  if (json!=null) {
+    emailform.setAttribute("class", "form-control is-valid" )
+}else emailformsetAttribute("class", "form-control is-valid"  )
+
+}
+
+
+function consultapost(){
+  let nameform=document.getElementById("nombreRegister").value;
+  let typeIdform=document.getElementById("typeDNI").innerText;
+  let dniform=document.getElementById("DNI").value;
+  let emailform=document.getElementById("email").value;
+  let passform=document.getElementById("password2").value;
+  let addressform=document.getElementById("address").value;
+
+  let datos={
+    role: {
+        "id": 2,
+        "roleName": "Client"
+    },
+    userName: nameform,
+    typeIdentityCard: typeIdform,
+    identityCardNumber: dniform,
+    email: emailform,
+    password: passform,
+    address: addressform
+  }
+
+//console.log(JSON.stringify(datos));
+
+    fetch("http://localhost:8080/users/", {
+          method: 'POST',
+          body: JSON.stringify(datos),
+          headers:{
+        "Content-Type":"application/json; charset=UTF-8"}
+        })
+    .then(response => response.json())
+    .then(json => console.log(json))
 }
